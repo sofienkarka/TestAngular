@@ -1,0 +1,31 @@
+<form [formGroup]='PostForm'>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Donner le titre</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Donner le titre du post" formControlName='Titre'>
+       <span *ngIf='PostForm.controls.Titre.invalid && PostForm.controls.Titre.touched' style="color: red;">Merci de saisir un Titre</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName='Description'></textarea>
+        <span *ngIf='PostForm.controls.Description.invalid && PostForm.controls.Description.touched' style="color: red;">Merci de saisir une Description</span>
+  
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Categorie:</label>
+      <select class="form-control" id="exampleFormControlSelect1" formControlName='Categories'>
+        <option>Sport</option>
+        <option>Technoliges</option>
+        <option>Economie</option>
+        <option>Société</option>
+        <option>Culture</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Date:</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Donner la date du Post" formControlName='Date'>
+        <span *ngIf='PostForm.controls.Date.invalid && PostForm.controls.Date.touched' style="color: red;">Merci de saisir une Date
+        </span>
+ 
+    </div>
+      <button type="button" class="btn btn-success" (click)='AjoutPost()'>Ajouter Post</button>
+  </form>

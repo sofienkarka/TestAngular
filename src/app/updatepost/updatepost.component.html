@@ -1,0 +1,27 @@
+<form [formGroup]='FormUpdate'>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">le titre:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Donner le titre du post" formControlName='Titre' >
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName='Description'></textarea >
+  
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Categorie:</label>
+      <select class="form-control" id="exampleFormControlSelect1" formControlName='Categories'>
+        <option>Sport</option>
+        <option>Technoliges</option>
+        <option>Economie</option>
+        <option>Société</option>
+        <option>Culture</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Date:</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Donner la date du Post" formControlName='Date'>
+ 
+    </div>
+      <button type="button" class="btn btn-success" (click)='ModifPost()'>Modifier Post</button>
+  </form>

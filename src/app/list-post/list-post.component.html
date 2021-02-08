@@ -1,0 +1,8 @@
+<fieldset >
+  <ul *ngFor='let blog of blogs;index as i'>
+    <li>Titre: {{blog.Titre}}    <button type="button" class="btn btn-success" (click)='Update(i)'>Modifier</button>     <button type="button" class="btn btn-danger" (click)='delete(i)'>Supprimer</button>
+</li>
+
+
+</ul>
+</fieldset>
